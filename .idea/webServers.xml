@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="8696ab4e-af90-4942-8abd-253dfda92c78" name="dehaze">
+        <fileTransfer accessType="SFTP" host="222.27.175.72" port="22" sshConfigId="827e6b3c-65d5-4027-aedb-8ec591019835" sshConfig="nn@222.27.175.72:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

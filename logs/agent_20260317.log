@@ -1,0 +1,213 @@
+2026-03-17 15:29:44,639 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有1条消息。
+2026-03-17 15:29:44,640 - agent - DEBUG - middleware.py:53 - [log_before_model]HumanMessage | 我当前城市是哪
+2026-03-17 15:29:47,227 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：get_user_location
+2026-03-17 15:29:47,227 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{}
+2026-03-17 15:29:47,420 - agent - INFO - agent_tools.py:108 - 高德定位成功：哈尔滨
+2026-03-17 15:29:47,422 - agent - INFO - middleware.py:36 - [tool monitor]工具get_user_location调用成功
+2026-03-17 15:29:47,489 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有3条消息。
+2026-03-17 15:29:47,490 - agent - DEBUG - middleware.py:53 - [log_before_model]ToolMessage | 哈尔滨
+2026-03-17 15:30:08,340 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有1条消息。
+2026-03-17 15:30:08,341 - agent - DEBUG - middleware.py:53 - [log_before_model]HumanMessage | 现在的天气是啥
+2026-03-17 15:30:12,149 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：get_user_location
+2026-03-17 15:30:12,149 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{}
+2026-03-17 15:30:12,284 - agent - INFO - agent_tools.py:108 - 高德定位成功：哈尔滨
+2026-03-17 15:30:12,284 - agent - INFO - middleware.py:36 - [tool monitor]工具get_user_location调用成功
+2026-03-17 15:30:12,350 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有3条消息。
+2026-03-17 15:30:12,351 - agent - DEBUG - middleware.py:53 - [log_before_model]ToolMessage | 哈尔滨
+2026-03-17 15:30:15,637 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：get_weather
+2026-03-17 15:30:15,637 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{'city': '哈尔滨'}
+2026-03-17 15:30:15,890 - agent - ERROR - agent_tools.py:86 - 获取哈尔滨天气异常：404 Client Error:  for url: https://geoapi.qweather.com/v2/city/lookup?location=%E5%93%88%E5%B0%94%E6%BB%A8&key=a914e104c3544c62910c04f4ec508f24
+2026-03-17 15:30:15,892 - agent - INFO - middleware.py:36 - [tool monitor]工具get_weather调用成功
+2026-03-17 15:30:19,084 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有5条消息。
+2026-03-17 15:30:19,085 - agent - DEBUG - middleware.py:53 - [log_before_model]ToolMessage | 获取哈尔滨天气失败（404 Client Error:  for url: https://geoapi.qweather.com/v2/city/lookup?location=%E5%93%88%E5%B0%94%E6%BB%A8&key=a914e104c3544c62910c04f4ec508f24），默认显示：晴天，气温26摄氏度，空气湿度50%，南风1级，AQI21，最近6小时降雨概率极低
+2026-03-17 15:38:04,559 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有1条消息。
+2026-03-17 15:38:04,560 - agent - DEBUG - middleware.py:53 - [log_before_model]HumanMessage | 我现在城市提暗器
+2026-03-17 15:38:13,821 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有1条消息。
+2026-03-17 15:38:13,821 - agent - DEBUG - middleware.py:53 - [log_before_model]HumanMessage | 我现在城市天气
+2026-03-17 15:38:14,948 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：get_user_location
+2026-03-17 15:38:14,949 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{}
+2026-03-17 15:38:15,117 - agent - INFO - agent_tools.py:143 - 高德定位成功：哈尔滨
+2026-03-17 15:38:15,118 - agent - INFO - middleware.py:36 - [tool monitor]工具get_user_location调用成功
+2026-03-17 15:38:15,191 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有3条消息。
+2026-03-17 15:38:15,192 - agent - DEBUG - middleware.py:53 - [log_before_model]ToolMessage | 哈尔滨
+2026-03-17 15:38:17,479 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：get_weather
+2026-03-17 15:38:17,480 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{'city': '哈尔滨'}
+2026-03-17 15:38:17,481 - agent - INFO - agent_tools.py:63 - 🔍 查询城市ID接口：https://geoapi.qweather.com/v2/city/lookup?location=%E5%93%88%E5%B0%94%E6%BB%A8&key=a914e104c3544c62910c04f4ec508f24
+2026-03-17 15:38:17,651 - agent - ERROR - agent_tools.py:122 - ❌ 天气工具异常：404 Client Error:  for url: https://geoapi.qweather.com/v2/city/lookup?location=%E5%93%88%E5%B0%94%E6%BB%A8&key=a914e104c3544c62910c04f4ec508f24
+Traceback (most recent call last):
+  File "D:\project\pythonProject1\agent\tools\agent_tools.py", line 66, in get_weather
+    city_res.raise_for_status()
+  File "D:\anac\envs\agent\lib\site-packages\requests\models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error:  for url: https://geoapi.qweather.com/v2/city/lookup?location=%E5%93%88%E5%B0%94%E6%BB%A8&key=a914e104c3544c62910c04f4ec508f24
+2026-03-17 15:38:17,668 - agent - INFO - middleware.py:36 - [tool monitor]工具get_weather调用成功
+2026-03-17 15:38:18,308 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有5条消息。
+2026-03-17 15:38:18,309 - agent - DEBUG - middleware.py:53 - [log_before_model]ToolMessage | 天气服务异常：404 Client Error:  for url: ht...
+2026-03-17 15:41:50,452 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有1条消息。
+2026-03-17 15:41:50,453 - agent - DEBUG - middleware.py:53 - [log_before_model]HumanMessage | 哈尔滨天气
+2026-03-17 15:41:52,118 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：get_weather
+2026-03-17 15:41:52,119 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{'city': '哈尔滨'}
+2026-03-17 15:41:52,120 - agent - INFO - agent_tools.py:63 - 🔍 查询城市ID接口：https://geoapi.qweather.com/v2/city/lookup?location=%E5%93%88%E5%B0%94%E6%BB%A8&key=a914e104c3544c62910c04f4ec508f24
+2026-03-17 15:41:52,282 - agent - ERROR - agent_tools.py:122 - ❌ 天气工具异常：404 Client Error:  for url: https://geoapi.qweather.com/v2/city/lookup?location=%E5%93%88%E5%B0%94%E6%BB%A8&key=a914e104c3544c62910c04f4ec508f24
+Traceback (most recent call last):
+  File "D:\project\pythonProject1\agent\tools\agent_tools.py", line 66, in get_weather
+    city_res.raise_for_status()
+  File "D:\anac\envs\agent\lib\site-packages\requests\models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error:  for url: https://geoapi.qweather.com/v2/city/lookup?location=%E5%93%88%E5%B0%94%E6%BB%A8&key=a914e104c3544c62910c04f4ec508f24
+2026-03-17 15:41:52,285 - agent - INFO - middleware.py:36 - [tool monitor]工具get_weather调用成功
+2026-03-17 15:41:52,926 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有3条消息。
+2026-03-17 15:41:52,926 - agent - DEBUG - middleware.py:53 - [log_before_model]ToolMessage | 天气服务异常：404 Client Error:  for url: ht...
+2026-03-17 15:43:01,576 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有1条消息。
+2026-03-17 15:43:01,577 - agent - DEBUG - middleware.py:53 - [log_before_model]HumanMessage | 哈尔滨天气
+2026-03-17 15:43:04,217 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：get_weather
+2026-03-17 15:43:04,218 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{'city': '哈尔滨'}
+2026-03-17 15:43:04,219 - agent - INFO - agent_tools.py:63 - 🔍 查询城市ID接口：https://geoapi.qweather.com/v3/city/lookup?location=%E5%93%88%E5%B0%94%E6%BB%A8&key=a914e104c3544c62910c04f4ec508f24
+2026-03-17 15:43:04,394 - agent - ERROR - agent_tools.py:122 - ❌ 天气工具异常：404 Client Error:  for url: https://geoapi.qweather.com/v3/city/lookup?location=%E5%93%88%E5%B0%94%E6%BB%A8&key=a914e104c3544c62910c04f4ec508f24
+Traceback (most recent call last):
+  File "D:\project\pythonProject1\agent\tools\agent_tools.py", line 66, in get_weather
+    city_res.raise_for_status()
+  File "D:\anac\envs\agent\lib\site-packages\requests\models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error:  for url: https://geoapi.qweather.com/v3/city/lookup?location=%E5%93%88%E5%B0%94%E6%BB%A8&key=a914e104c3544c62910c04f4ec508f24
+2026-03-17 15:43:04,397 - agent - INFO - middleware.py:36 - [tool monitor]工具get_weather调用成功
+2026-03-17 15:43:05,047 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有3条消息。
+2026-03-17 15:43:05,047 - agent - DEBUG - middleware.py:53 - [log_before_model]ToolMessage | 天气服务异常：404 Client Error:  for url: ht...
+2026-03-17 18:51:29,285 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有1条消息。
+2026-03-17 18:51:29,286 - agent - DEBUG - middleware.py:53 - [log_before_model]HumanMessage | 我现在在哪
+2026-03-17 18:51:30,765 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：get_user_location
+2026-03-17 18:51:30,765 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{}
+2026-03-17 18:51:31,055 - agent - INFO - agent_tools.py:143 - 高德定位成功：哈尔滨
+2026-03-17 18:51:31,058 - agent - INFO - middleware.py:36 - [tool monitor]工具get_user_location调用成功
+2026-03-17 18:51:31,131 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有3条消息。
+2026-03-17 18:51:31,132 - agent - DEBUG - middleware.py:53 - [log_before_model]ToolMessage | 哈尔滨
+2026-03-17 18:51:55,210 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有1条消息。
+2026-03-17 18:51:55,211 - agent - DEBUG - middleware.py:53 - [log_before_model]HumanMessage | 我今天应该穿什么
+2026-03-17 18:52:17,552 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有1条消息。
+2026-03-17 18:52:17,553 - agent - DEBUG - middleware.py:53 - [log_before_model]HumanMessage | 今天的扫地机器人应该怎么保养
+2026-03-17 18:52:21,092 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：rag_summarize
+2026-03-17 18:52:21,092 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{'query': '扫地机器人日常保养方法'}
+2026-03-17 18:52:23,923 - agent - INFO - middleware.py:36 - [tool monitor]工具rag_summarize调用成功
+2026-03-17 18:52:25,112 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有3条消息。
+2026-03-17 18:52:25,113 - agent - DEBUG - middleware.py:53 - [log_before_model]ToolMessage | 定期清理尘盒、滚刷和边刷，检查并清除缠绕的毛发或杂物；清洁传感器和充电触点；保持滤网干净，必要时更换；避免在潮湿或有水区域使用；长期不用时断电存放。
+2026-03-17 18:53:51,157 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有1条消息。
+2026-03-17 18:53:51,158 - agent - DEBUG - middleware.py:53 - [log_before_model]HumanMessage | 现在的时间是多少
+2026-03-17 18:53:52,363 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：get_current_date
+2026-03-17 18:53:52,363 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{}
+2026-03-17 18:53:52,365 - agent - INFO - agent_tools.py:269 - 成功获取当前日期：2026-03-17
+2026-03-17 18:53:52,366 - agent - INFO - middleware.py:36 - [tool monitor]工具get_current_date调用成功
+2026-03-17 18:53:52,541 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有3条消息。
+2026-03-17 18:53:52,541 - agent - DEBUG - middleware.py:53 - [log_before_model]ToolMessage | 2026-03-17
+2026-03-17 19:03:36,158 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有1条消息。
+2026-03-17 19:03:36,158 - agent - DEBUG - middleware.py:53 - [log_before_model]HumanMessage | 查询我所在城市天气
+2026-03-17 19:03:38,817 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：get_user_location
+2026-03-17 19:03:38,817 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{}
+2026-03-17 19:03:39,120 - agent - INFO - agent_tools.py:143 - 高德定位成功：哈尔滨
+2026-03-17 19:03:39,122 - agent - INFO - middleware.py:36 - [tool monitor]工具get_user_location调用成功
+2026-03-17 19:03:39,194 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有3条消息。
+2026-03-17 19:03:39,195 - agent - DEBUG - middleware.py:53 - [log_before_model]ToolMessage | 哈尔滨
+2026-03-17 19:03:42,761 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：get_weather
+2026-03-17 19:03:42,762 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{'city': '哈尔滨'}
+2026-03-17 19:03:42,762 - agent - INFO - agent_tools.py:63 - 🔍 查询城市ID接口：https://geoapi.qweather.com/v2/city/lookup?location=%E5%93%88%E5%B0%94%E6%BB%A8&key=a914e104c3544c62910c04f4ec508f24
+2026-03-17 19:03:42,963 - agent - ERROR - agent_tools.py:122 - ❌ 天气工具异常：404 Client Error:  for url: https://geoapi.qweather.com/v2/city/lookup?location=%E5%93%88%E5%B0%94%E6%BB%A8&key=a914e104c3544c62910c04f4ec508f24
+Traceback (most recent call last):
+  File "D:\project\pythonProject1\agent\tools\agent_tools.py", line 66, in get_weather
+    city_res.raise_for_status()
+  File "D:\anac\envs\agent\lib\site-packages\requests\models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error:  for url: https://geoapi.qweather.com/v2/city/lookup?location=%E5%93%88%E5%B0%94%E6%BB%A8&key=a914e104c3544c62910c04f4ec508f24
+2026-03-17 19:03:42,967 - agent - INFO - middleware.py:36 - [tool monitor]工具get_weather调用成功
+2026-03-17 19:03:43,621 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有5条消息。
+2026-03-17 19:03:43,621 - agent - DEBUG - middleware.py:53 - [log_before_model]ToolMessage | 天气服务异常：404 Client Error:  for url: ht...
+2026-03-17 19:07:20,032 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有1条消息。
+2026-03-17 19:07:20,033 - agent - DEBUG - middleware.py:53 - [log_before_model]HumanMessage | 查询所在城市天气
+2026-03-17 19:07:25,973 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：get_user_location
+2026-03-17 19:07:25,974 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{}
+2026-03-17 19:07:26,170 - agent - INFO - agent_tools.py:143 - 高德定位成功：哈尔滨
+2026-03-17 19:07:26,172 - agent - INFO - middleware.py:36 - [tool monitor]工具get_user_location调用成功
+2026-03-17 19:07:26,237 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有3条消息。
+2026-03-17 19:07:26,238 - agent - DEBUG - middleware.py:53 - [log_before_model]ToolMessage | 哈尔滨
+2026-03-17 19:07:29,001 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：get_weather
+2026-03-17 19:07:29,001 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{'city': '哈尔滨'}
+2026-03-17 19:07:29,002 - agent - INFO - agent_tools.py:63 - 🔍 查询城市ID接口：https://geoapi.qweather.com/v2/city/lookup?location=%E5%93%88%E5%B0%94%E6%BB%A8&key=a914e104c3544c62910c04f4ec508f24
+2026-03-17 19:07:29,161 - agent - ERROR - agent_tools.py:122 - ❌ 天气工具异常：404 Client Error:  for url: https://geoapi.qweather.com/v2/city/lookup?location=%E5%93%88%E5%B0%94%E6%BB%A8&key=a914e104c3544c62910c04f4ec508f24
+Traceback (most recent call last):
+  File "D:\project\pythonProject1\agent\tools\agent_tools.py", line 66, in get_weather
+    city_res.raise_for_status()
+  File "D:\anac\envs\agent\lib\site-packages\requests\models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error:  for url: https://geoapi.qweather.com/v2/city/lookup?location=%E5%93%88%E5%B0%94%E6%BB%A8&key=a914e104c3544c62910c04f4ec508f24
+2026-03-17 19:07:29,163 - agent - INFO - middleware.py:36 - [tool monitor]工具get_weather调用成功
+2026-03-17 19:07:29,817 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有5条消息。
+2026-03-17 19:07:29,818 - agent - DEBUG - middleware.py:53 - [log_before_model]ToolMessage | 天气服务异常：404 Client Error:  for url: ht...
+2026-03-17 19:16:16,919 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有1条消息。
+2026-03-17 19:16:16,921 - agent - DEBUG - middleware.py:53 - [log_before_model]HumanMessage | 哈尔滨现在天气
+2026-03-17 19:16:22,008 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：get_weather
+2026-03-17 19:16:22,008 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{'city': '哈尔滨'}
+2026-03-17 19:16:22,009 - agent - INFO - agent_tools.py:63 - 🔍 查询城市ID接口：https://geoapi.qweather.com/v2/city/lookup?location=%E5%93%88%E5%B0%94%E6%BB%A8&key=a914e104c3544c62910c04f4ec508f24
+2026-03-17 19:16:22,211 - agent - ERROR - agent_tools.py:122 - ❌ 天气工具异常：404 Client Error:  for url: https://geoapi.qweather.com/v2/city/lookup?location=%E5%93%88%E5%B0%94%E6%BB%A8&key=a914e104c3544c62910c04f4ec508f24
+Traceback (most recent call last):
+  File "D:\project\pythonProject1\agent\tools\agent_tools.py", line 66, in get_weather
+    city_res.raise_for_status()
+  File "D:\anac\envs\agent\lib\site-packages\requests\models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error:  for url: https://geoapi.qweather.com/v2/city/lookup?location=%E5%93%88%E5%B0%94%E6%BB%A8&key=a914e104c3544c62910c04f4ec508f24
+2026-03-17 19:16:22,214 - agent - INFO - middleware.py:36 - [tool monitor]工具get_weather调用成功
+2026-03-17 19:16:22,872 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有3条消息。
+2026-03-17 19:16:22,873 - agent - DEBUG - middleware.py:53 - [log_before_model]ToolMessage | 天气服务异常：404 Client Error:  for url: ht...
+2026-03-17 19:16:26,814 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：get_user_location
+2026-03-17 19:16:26,815 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{}
+2026-03-17 19:16:26,987 - agent - INFO - agent_tools.py:143 - 高德定位成功：哈尔滨
+2026-03-17 19:16:26,988 - agent - INFO - middleware.py:36 - [tool monitor]工具get_user_location调用成功
+2026-03-17 19:16:27,051 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有5条消息。
+2026-03-17 19:16:27,052 - agent - DEBUG - middleware.py:53 - [log_before_model]ToolMessage | 哈尔滨
+2026-03-17 19:16:31,959 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：rag_summarize
+2026-03-17 19:16:31,961 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{'query': '哈尔滨气候对扫地机器人使用影响'}
+2026-03-17 19:16:33,948 - agent - INFO - middleware.py:36 - [tool monitor]工具rag_summarize调用成功
+2026-03-17 19:16:34,366 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有7条消息。
+2026-03-17 19:16:34,366 - agent - DEBUG - middleware.py:53 - [log_before_model]ToolMessage | 参考资料中未提及哈尔滨气候对扫地机器人使用的影响。
+2026-03-17 19:16:38,857 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：rag_summarize
+2026-03-17 19:16:38,857 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{'query': '寒冷地区冬季扫地机器人使用注意事项'}
+2026-03-17 19:16:43,802 - agent - INFO - middleware.py:36 - [tool monitor]工具rag_summarize调用成功
+2026-03-17 19:16:45,937 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有9条消息。
+2026-03-17 19:16:45,937 - agent - DEBUG - middleware.py:53 - [log_before_model]ToolMessage | 寒冷地区冬季使用扫地机器人时，需注意以下事项：避免在低于0℃的环境中长时间使用或存放，以防电池性能下降或损坏；使用前确保地面无结冰或积雪，以免影响行走或造成打滑；定期清理尘盒和滤网，防止潮湿灰尘冻结堵塞；若室内温差大，建议将机器人放置在恒温环境中充电，以延长电池寿命。
+2026-03-17 19:22:15,751 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有1条消息。
+2026-03-17 19:22:15,752 - agent - DEBUG - middleware.py:53 - [log_before_model]HumanMessage | 现在我所在城市的天气状况
+2026-03-17 19:22:23,734 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：get_user_location
+2026-03-17 19:22:23,735 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{}
+2026-03-17 19:22:23,947 - agent - INFO - agent_tools.py:125 - 高德定位成功：哈尔滨
+2026-03-17 19:22:23,948 - agent - INFO - middleware.py:36 - [tool monitor]工具get_user_location调用成功
+2026-03-17 19:22:24,018 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有3条消息。
+2026-03-17 19:22:24,019 - agent - DEBUG - middleware.py:53 - [log_before_model]ToolMessage | 哈尔滨
+2026-03-17 19:22:27,186 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：get_weather
+2026-03-17 19:22:27,187 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{'city': '哈尔滨'}
+2026-03-17 19:22:27,187 - agent - INFO - agent_tools.py:69 - 🔍 查询高德天气接口：https://restapi.amap.com/v3/weather/weatherInfo，参数：{'city': '哈尔滨', 'key': '9257e4e7897594032b39f7fbdb41964f', 'extensions': 'base', 'output': 'json', 'language': 'zh-CN'}
+2026-03-17 19:22:27,351 - agent - ERROR - agent_tools.py:104 - ❌ 高德天气工具异常：'pressure'
+Traceback (most recent call last):
+  File "D:\project\pythonProject1\agent\tools\agent_tools.py", line 94, in get_weather
+    f"气压{live['pressure']}hPa，发布时间：{live['reporttime']}"
+KeyError: 'pressure'
+2026-03-17 19:22:27,353 - agent - INFO - middleware.py:36 - [tool monitor]工具get_weather调用成功
+2026-03-17 19:22:27,692 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有5条消息。
+2026-03-17 19:22:27,692 - agent - DEBUG - middleware.py:53 - [log_before_model]ToolMessage | 天气服务异常：'pressure'...
+2026-03-17 19:23:49,304 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有1条消息。
+2026-03-17 19:23:49,305 - agent - DEBUG - middleware.py:53 - [log_before_model]HumanMessage | 哈尔滨天气
+2026-03-17 19:23:51,172 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：get_weather
+2026-03-17 19:23:51,172 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{'city': '哈尔滨'}
+2026-03-17 19:23:51,173 - agent - INFO - agent_tools.py:69 - 🔍 查询高德天气接口：https://restapi.amap.com/v3/weather/weatherInfo，参数：{'city': '哈尔滨', 'key': '9257e4e7897594032b39f7fbdb41964f', 'extensions': 'base', 'output': 'json', 'language': 'zh-CN'}
+2026-03-17 19:23:51,442 - agent - ERROR - agent_tools.py:104 - ❌ 高德天气工具异常：'pressure'
+Traceback (most recent call last):
+  File "D:\project\pythonProject1\agent\tools\agent_tools.py", line 94, in get_weather
+    winddirection = live.get("winddirection", "未知")
+KeyError: 'pressure'
+2026-03-17 19:23:51,444 - agent - INFO - middleware.py:36 - [tool monitor]工具get_weather调用成功
+2026-03-17 19:23:51,772 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有3条消息。
+2026-03-17 19:23:51,772 - agent - DEBUG - middleware.py:53 - [log_before_model]ToolMessage | 天气服务异常：'pressure'...
+2026-03-17 19:24:48,920 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有1条消息。
+2026-03-17 19:24:48,921 - agent - DEBUG - middleware.py:53 - [log_before_model]HumanMessage | 哈尔滨天气
+2026-03-17 19:24:51,437 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：get_weather
+2026-03-17 19:24:51,437 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{'city': '哈尔滨'}
+2026-03-17 19:24:51,438 - agent - INFO - agent_tools.py:69 - 🔍 查询高德天气接口：https://restapi.amap.com/v3/weather/weatherInfo，参数：{'city': '哈尔滨', 'key': '9257e4e7897594032b39f7fbdb41964f', 'extensions': 'base', 'output': 'json', 'language': 'zh-CN'}
+2026-03-17 19:24:51,627 - agent - INFO - middleware.py:36 - [tool monitor]工具get_weather调用成功
+2026-03-17 19:24:52,605 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有3条消息。
+2026-03-17 19:24:52,606 - agent - DEBUG - middleware.py:53 - [log_before_model]ToolMessage | 城市哈尔滨实时天气：霾，气温3℃，湿度23%，东南≤3级，气压未知hPa，发布时间：2026-03-17 19:03:29

@@ -1,0 +1,29 @@
+# ==========================================
+# Chroma向量库核心配置 (三表隔离架构)
+# ==========================================
+
+# 1. 默认/公共向量库集合名称 (用于存放攻略、景点大全等公共知识)
+collection_name: public_knowledge
+
+# 2. 画像向量库集合名称 (用于存放用户的避坑偏好和个性化标签)
+profile_collection_name: travel_user_profiles
+
+# 3. 历史记录向量库集合名称 (用于存放多轮对话的上下文记忆)
+history_collection_name: travel_history_records
+
+# 向量库持久化目录：向量数据落地存储路径，重启后数据不丢失
+persist_directory: chroma_db
+# RAG检索召回数：返回与问题最相似的Top3条知识库片段
+k: 3
+# 知识库源文件目录：存放待向量化的txt/pdf原始文件
+data_path: data
+# MD5记录文件：存储已处理文件的MD5值，用于增量更新
+md5_hex_store: md5.text
+# 允许的知识库文件类型
+allow_knowledge_file_type: ["txt", "pdf"]
+# 文本切分块大小
+chunk_size: 200
+# 文本块重叠长度
+chunk_overlap: 20
+# 文本切分分隔符
+separators: ["\n\n", "\n", ".", "!", "?", "。", "！", "？", " ", ""]

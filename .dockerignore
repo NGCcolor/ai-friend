@@ -1,0 +1,21 @@
+# 忽略所有层级下的虚拟环境
+**/.venv/
+**/venv/
+
+# 忽略所有层级下的 Python 缓存（解决你看到的每个目录都有的问题）
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/*.pyd
+
+# 忽略所有层级下的向量数据库（防止 Windows/Linux 兼容性错误）
+**/chroma_db/
+
+# 忽略 IDE 和系统配置
+**/.idea/
+**/.vscode/
+**/.DS_Store
+
+# 忽略 Git 仓库记录
+.git/
+.gitignore

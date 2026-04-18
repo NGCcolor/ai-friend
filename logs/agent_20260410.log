@@ -1,0 +1,157 @@
+2026-04-10 16:55:41,297 - agent - DEBUG - skill_manager.py:18 - [SkillManager] 成功注册技能: time_perception_skill
+2026-04-10 16:55:41,298 - agent - DEBUG - skill_manager.py:18 - [SkillManager] 成功注册技能: weather_query_skill
+2026-04-10 16:55:41,298 - agent - DEBUG - skill_manager.py:18 - [SkillManager] 成功注册技能: location_perception_skill
+2026-04-10 16:55:41,298 - agent - DEBUG - skill_manager.py:18 - [SkillManager] 成功注册技能: transit_route_skill
+2026-04-10 16:55:41,298 - agent - DEBUG - skill_manager.py:18 - [SkillManager] 成功注册技能: update_user_profile_skill
+2026-04-10 16:55:41,298 - agent - DEBUG - skill_manager.py:18 - [SkillManager] 成功注册技能: find_similar_vibe_skill
+2026-04-10 16:55:41,299 - agent - DEBUG - skill_manager.py:18 - [SkillManager] 成功注册技能: xhs_mcp_search_skill
+2026-04-10 16:55:41,299 - agent - DEBUG - skill_manager.py:18 - [SkillManager] 成功注册技能: get_user_profile_skill
+2026-04-10 16:55:41,299 - agent - DEBUG - skill_manager.py:18 - [SkillManager] 成功注册技能: save_global_feedback_skill
+2026-04-10 16:56:14,795 - agent - INFO - prompt_loader.py:43 - [load_system_prompts]成功将 4 个阶段提示词组装为全局 SOP 大脑。
+2026-04-10 16:56:56,628 - agent - INFO - gateway_handler.py:47 - [IntentGateway] 正在对输入进行意图分析与改写拦截: 帮我规划一个四天的行程
+2026-04-10 16:56:59,955 - agent - INFO - react_agent.py:55 - [default_user] 命中任务路由。生成 RAG 词: []
+2026-04-10 16:56:59,958 - agent - INFO - middleware.py:53 - [log_before_model]即将调用模型，带有1条消息。
+2026-04-10 16:56:59,958 - agent - DEBUG - middleware.py:54 - [log_before_model]HumanMessage | [系统底层前置处理结果]
+用户的原始提问是：“帮我规划一个四天的行程”
+经系统解析，其实际意图为：用户希望规划一个为期四天的旅游行程，但未提供目的地、出行时间、兴趣偏好等关键信息。
+当前操作用户的唯一 ID 为：default_user
+
+为保证规划准确性，系统已生成最优检索词，请直接调用工具：
+- 内部 RAG 检索工具建议关键词：【】
+- 外部 MCP（如小红书）检索建议关键词：【】
+
+现在，请结合用户的历史画像记录（如有），根据上述意图和关键词，开始你的规划与工具调用：
+2026-04-10 16:56:59,959 - agent - INFO - prompt_loader.py:43 - [load_system_prompts]成功将 4 个阶段提示词组装为全局 SOP 大脑。
+2026-04-10 16:57:01,786 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：get_user_profile_skill
+2026-04-10 16:57:01,786 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{'user_id': 'default_user'}
+2026-04-10 16:57:01,789 - agent - INFO - user_profile_skill.py:76 - [get_user_profile_skill] 正在尝试读取用户 default_user 的长期画像...
+2026-04-10 16:57:01,790 - agent - ERROR - user_profile_skill.py:93 - [get_user_profile_skill] 读取画像异常: 'VectorStoreService' object has no attribute 'get_by_id'
+2026-04-10 16:57:01,790 - agent - INFO - middleware.py:36 - [tool monitor]工具get_user_profile_skill调用成功
+2026-04-10 16:57:01,791 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：time_perception_skill
+2026-04-10 16:57:01,792 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{}
+2026-04-10 16:57:01,792 - agent - INFO - middleware.py:36 - [tool monitor]工具time_perception_skill调用成功
+2026-04-10 16:57:01,793 - agent - INFO - middleware.py:53 - [log_before_model]即将调用模型，带有4条消息。
+2026-04-10 16:57:01,794 - agent - DEBUG - middleware.py:54 - [log_before_model]ToolMessage | 当前日期：2026-04-10，时间：16:57:01，星期五，当前季节：春季。
+2026-04-10 16:57:01,795 - agent - INFO - prompt_loader.py:43 - [load_system_prompts]成功将 4 个阶段提示词组装为全局 SOP 大脑。
+2026-04-10 16:57:02,976 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：location_perception_skill
+2026-04-10 16:57:02,976 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{}
+2026-04-10 16:57:03,228 - agent - ERROR - location_skill.py:57 - [location_perception_skill] 定位失败：Invalid format specifier
+2026-04-10 16:57:03,228 - agent - INFO - middleware.py:36 - [tool monitor]工具location_perception_skill调用成功
+2026-04-10 16:57:03,230 - agent - INFO - middleware.py:53 - [log_before_model]即将调用模型，带有6条消息。
+2026-04-10 16:57:03,230 - agent - DEBUG - middleware.py:54 - [log_before_model]ToolMessage | 哈尔滨市中央大街
+2026-04-10 16:57:03,233 - agent - INFO - prompt_loader.py:43 - [load_system_prompts]成功将 4 个阶段提示词组装为全局 SOP 大脑。
+2026-04-10 16:57:04,582 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：weather_query_skill
+2026-04-10 16:57:04,582 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{'city': '哈尔滨市'}
+2026-04-10 16:57:04,738 - agent - INFO - middleware.py:36 - [tool monitor]工具weather_query_skill调用成功
+2026-04-10 16:57:04,739 - agent - INFO - middleware.py:53 - [log_before_model]即将调用模型，带有8条消息。
+2026-04-10 16:57:04,740 - agent - DEBUG - middleware.py:54 - [log_before_model]ToolMessage | 哈尔滨市实时天气：小雪，气温1℃，风向北，风力≤3级。
+2026-04-10 16:57:04,741 - agent - INFO - prompt_loader.py:43 - [load_system_prompts]成功将 4 个阶段提示词组装为全局 SOP 大脑。
+2026-04-10 16:57:06,656 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：xhs_mcp_search_skill
+2026-04-10 16:57:06,657 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{'keyword': '哈尔滨 四天三晚 春季旅游攻略'}
+2026-04-10 16:57:06,657 - agent - INFO - xhs_mcp_skill.py:25 - [xhs_mcp_skill] 开始检索小红书并获取详情，关键词：哈尔滨 四天三晚 春季旅游攻略
+2026-04-10 16:57:36,918 - agent - ERROR - xhs_mcp_skill.py:142 - [xhs_mcp_skill] 运行异常: HTTPConnectionPool(host='117.72.17.28', port=18060): Read timed out. (read timeout=30)
+2026-04-10 16:57:36,919 - agent - INFO - middleware.py:36 - [tool monitor]工具xhs_mcp_search_skill调用成功
+2026-04-10 16:57:36,920 - agent - INFO - middleware.py:53 - [log_before_model]即将调用模型，带有10条消息。
+2026-04-10 16:57:36,920 - agent - DEBUG - middleware.py:54 - [log_before_model]ToolMessage | 小红书检索服务暂不可用，请依赖内部知识库。错误: HTTPConnectionPool(host='117.72.17.28', port=18060): Read timed out. (read timeout=30)
+2026-04-10 16:57:36,921 - agent - INFO - prompt_loader.py:43 - [load_system_prompts]成功将 4 个阶段提示词组装为全局 SOP 大脑。
+2026-04-10 16:57:39,045 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：find_similar_vibe_skill
+2026-04-10 16:57:39,055 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{'vibe_description': '春季四天行程，从哈尔滨中央大街出发，天气微冷有小雪'}
+2026-04-10 16:57:39,333 - agent - INFO - middleware.py:36 - [tool monitor]工具find_similar_vibe_skill调用成功
+2026-04-10 16:57:39,335 - agent - INFO - middleware.py:53 - [log_before_model]即将调用模型，带有12条消息。
+2026-04-10 16:57:39,336 - agent - DEBUG - middleware.py:54 - [log_before_model]ToolMessage | 未在数据库中找到相似偏好的历史记录，请直接发挥创意生成路线。
+2026-04-10 16:57:39,337 - agent - INFO - prompt_loader.py:43 - [load_system_prompts]成功将 4 个阶段提示词组装为全局 SOP 大脑。
+2026-04-10 16:58:12,162 - agent - INFO - gateway_handler.py:47 - [IntentGateway] 正在对输入进行意图分析与改写拦截: A\
+2026-04-10 16:58:15,703 - agent - INFO - react_agent.py:48 - [default_user] 命中闲聊路由，直接返回兜底响应，绕过 ReAct 链。
+2026-04-10 16:58:29,654 - agent - INFO - gateway_handler.py:47 - [IntentGateway] 正在对输入进行意图分析与改写拦截: 我选择方案A
+2026-04-10 16:58:32,569 - agent - INFO - react_agent.py:55 - [default_user] 命中任务路由。生成 RAG 词: []
+2026-04-10 16:58:32,570 - agent - INFO - middleware.py:53 - [log_before_model]即将调用模型，带有1条消息。
+2026-04-10 16:58:32,570 - agent - DEBUG - middleware.py:54 - [log_before_model]HumanMessage | [系统底层前置处理结果]
+用户的原始提问是：“我选择方案A”
+经系统解析，其实际意图为：用户选择方案A
+当前操作用户的唯一 ID 为：default_user
+
+为保证规划准确性，系统已生成最优检索词，请直接调用工具：
+- 内部 RAG 检索工具建议关键词：【】
+- 外部 MCP（如小红书）检索建议关键词：【】
+
+现在，请结合用户的历史画像记录（如有），根据上述意图和关键词，开始你的规划与工具调用：
+2026-04-10 16:58:32,572 - agent - INFO - prompt_loader.py:43 - [load_system_prompts]成功将 4 个阶段提示词组装为全局 SOP 大脑。
+2026-04-10 16:58:34,207 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：get_user_profile_skill
+2026-04-10 16:58:34,208 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{'user_id': 'default_user'}
+2026-04-10 16:58:34,208 - agent - INFO - user_profile_skill.py:76 - [get_user_profile_skill] 正在尝试读取用户 default_user 的长期画像...
+2026-04-10 16:58:34,209 - agent - ERROR - user_profile_skill.py:93 - [get_user_profile_skill] 读取画像异常: 'VectorStoreService' object has no attribute 'get_by_id'
+2026-04-10 16:58:34,209 - agent - INFO - middleware.py:36 - [tool monitor]工具get_user_profile_skill调用成功
+2026-04-10 16:58:34,210 - agent - INFO - middleware.py:53 - [log_before_model]即将调用模型，带有3条消息。
+2026-04-10 16:58:34,210 - agent - DEBUG - middleware.py:54 - [log_before_model]ToolMessage | 读取用户画像时出错，请暂时作为新用户处理。
+2026-04-10 16:58:34,212 - agent - INFO - prompt_loader.py:43 - [load_system_prompts]成功将 4 个阶段提示词组装为全局 SOP 大脑。
+2026-04-10 16:58:35,811 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：location_perception_skill
+2026-04-10 16:58:35,811 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{}
+2026-04-10 16:58:35,982 - agent - ERROR - location_skill.py:57 - [location_perception_skill] 定位失败：Invalid format specifier
+2026-04-10 16:58:35,982 - agent - INFO - middleware.py:36 - [tool monitor]工具location_perception_skill调用成功
+2026-04-10 16:58:35,984 - agent - INFO - middleware.py:53 - [log_before_model]即将调用模型，带有5条消息。
+2026-04-10 16:58:35,984 - agent - DEBUG - middleware.py:54 - [log_before_model]ToolMessage | 哈尔滨市中央大街
+2026-04-10 16:58:35,985 - agent - INFO - prompt_loader.py:43 - [load_system_prompts]成功将 4 个阶段提示词组装为全局 SOP 大脑。
+2026-04-10 16:58:38,288 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：weather_query_skill
+2026-04-10 16:58:38,288 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{'city': '哈尔滨市'}
+2026-04-10 16:58:38,682 - agent - INFO - middleware.py:36 - [tool monitor]工具weather_query_skill调用成功
+2026-04-10 16:58:38,683 - agent - INFO - middleware.py:53 - [log_before_model]即将调用模型，带有7条消息。
+2026-04-10 16:58:38,684 - agent - DEBUG - middleware.py:54 - [log_before_model]ToolMessage | 哈尔滨市实时天气：小雪，气温1℃，风向北，风力≤3级。
+2026-04-10 16:58:38,685 - agent - INFO - prompt_loader.py:43 - [load_system_prompts]成功将 4 个阶段提示词组装为全局 SOP 大脑。
+2026-04-10 16:58:40,819 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：xhs_mcp_search_skill
+2026-04-10 16:58:40,819 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{'keyword': '哈尔滨 中央大街 一日游 路线'}
+2026-04-10 16:58:40,820 - agent - INFO - xhs_mcp_skill.py:25 - [xhs_mcp_skill] 开始检索小红书并获取详情，关键词：哈尔滨 中央大街 一日游 路线
+2026-04-10 16:59:11,051 - agent - ERROR - xhs_mcp_skill.py:142 - [xhs_mcp_skill] 运行异常: HTTPConnectionPool(host='117.72.17.28', port=18060): Read timed out. (read timeout=30)
+2026-04-10 16:59:11,051 - agent - INFO - middleware.py:36 - [tool monitor]工具xhs_mcp_search_skill调用成功
+2026-04-10 16:59:11,053 - agent - INFO - middleware.py:53 - [log_before_model]即将调用模型，带有9条消息。
+2026-04-10 16:59:11,053 - agent - DEBUG - middleware.py:54 - [log_before_model]ToolMessage | 小红书检索服务暂不可用，请依赖内部知识库。错误: HTTPConnectionPool(host='117.72.17.28', port=18060): Read timed out. (read timeout=30)
+2026-04-10 16:59:11,054 - agent - INFO - prompt_loader.py:43 - [load_system_prompts]成功将 4 个阶段提示词组装为全局 SOP 大脑。
+2026-04-10 16:59:12,866 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：rag_summarize
+2026-04-10 16:59:12,866 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{'query': '哈尔滨中央大街周边必玩景点及美食推荐'}
+2026-04-10 16:59:12,867 - agent - INFO - middleware.py:36 - [tool monitor]工具rag_summarize调用成功
+2026-04-10 16:59:12,868 - agent - INFO - middleware.py:53 - [log_before_model]即将调用模型，带有11条消息。
+2026-04-10 16:59:12,868 - agent - DEBUG - middleware.py:54 - [log_before_model]ToolMessage | Error: rag_summarize is not a valid tool, try one of [time_perception_skill, weather_query_skill, location_perception_skill, transit_route_skill, update_user_profile_skill, find_similar_vibe_skill, xhs_mcp_search_skill, get_user_profile_skill, save_global_feedback_skill].
+2026-04-10 16:59:12,869 - agent - INFO - prompt_loader.py:43 - [load_system_prompts]成功将 4 个阶段提示词组装为全局 SOP 大脑。
+2026-04-10 16:59:14,688 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：find_similar_vibe_skill
+2026-04-10 16:59:14,688 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{'vibe_description': '哈尔滨中央大街一日游，经典路线'}
+2026-04-10 16:59:14,959 - agent - INFO - middleware.py:36 - [tool monitor]工具find_similar_vibe_skill调用成功
+2026-04-10 16:59:14,960 - agent - INFO - middleware.py:53 - [log_before_model]即将调用模型，带有13条消息。
+2026-04-10 16:59:14,960 - agent - DEBUG - middleware.py:54 - [log_before_model]ToolMessage | 未在数据库中找到相似偏好的历史记录，请直接发挥创意生成路线。
+2026-04-10 16:59:14,961 - agent - INFO - prompt_loader.py:43 - [load_system_prompts]成功将 4 个阶段提示词组装为全局 SOP 大脑。
+2026-04-10 16:59:16,508 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：time_perception_skill
+2026-04-10 16:59:16,508 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{}
+2026-04-10 16:59:16,508 - agent - INFO - middleware.py:36 - [tool monitor]工具time_perception_skill调用成功
+2026-04-10 16:59:16,509 - agent - INFO - middleware.py:53 - [log_before_model]即将调用模型，带有15条消息。
+2026-04-10 16:59:16,510 - agent - DEBUG - middleware.py:54 - [log_before_model]ToolMessage | 当前日期：2026-04-10，时间：16:59:16，星期五，当前季节：春季。
+2026-04-10 16:59:16,511 - agent - INFO - prompt_loader.py:43 - [load_system_prompts]成功将 4 个阶段提示词组装为全局 SOP 大脑。
+2026-04-10 16:59:19,765 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：transit_route_skill
+2026-04-10 16:59:19,765 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{'origin': '126.534967,45.785993', 'destination': '126.530235,45.793178', 'city': '哈尔滨'}
+2026-04-10 16:59:19,994 - agent - INFO - middleware.py:36 - [tool monitor]工具transit_route_skill调用成功
+2026-04-10 16:59:19,996 - agent - INFO - middleware.py:53 - [log_before_model]即将调用模型，带有17条消息。
+2026-04-10 16:59:19,996 - agent - DEBUG - middleware.py:54 - [log_before_model]ToolMessage | 未查询到从 126.534967,45.785993 到 126.530235,45.793178 的有效公交路线。
+2026-04-10 16:59:19,998 - agent - INFO - prompt_loader.py:43 - [load_system_prompts]成功将 4 个阶段提示词组装为全局 SOP 大脑。
+2026-04-10 17:00:20,833 - agent - INFO - gateway_handler.py:47 - [IntentGateway] 正在对输入进行意图分析与改写拦截: 都非常的夯，评价都很好
+2026-04-10 17:00:24,458 - agent - INFO - react_agent.py:48 - [default_user] 命中闲聊路由，直接返回兜底响应，绕过 ReAct 链。
+2026-04-10 17:01:13,942 - agent - INFO - gateway_handler.py:47 - [IntentGateway] 正在对输入进行意图分析与改写拦截: 我要对景点进行评价
+2026-04-10 17:01:17,713 - agent - INFO - react_agent.py:55 - [default_user] 命中任务路由。生成 RAG 词: []
+2026-04-10 17:01:17,714 - agent - INFO - middleware.py:53 - [log_before_model]即将调用模型，带有1条消息。
+2026-04-10 17:01:17,714 - agent - DEBUG - middleware.py:54 - [log_before_model]HumanMessage | [系统底层前置处理结果]
+用户的原始提问是：“我要对景点进行评价”
+经系统解析，其实际意图为：用户想要对某个景点进行评价
+当前操作用户的唯一 ID 为：default_user
+
+为保证规划准确性，系统已生成最优检索词，请直接调用工具：
+- 内部 RAG 检索工具建议关键词：【】
+- 外部 MCP（如小红书）检索建议关键词：【】
+
+现在，请结合用户的历史画像记录（如有），根据上述意图和关键词，开始你的规划与工具调用：
+2026-04-10 17:01:17,716 - agent - INFO - prompt_loader.py:43 - [load_system_prompts]成功将 4 个阶段提示词组装为全局 SOP 大脑。
+2026-04-10 17:01:19,222 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：get_user_profile_skill
+2026-04-10 17:01:19,222 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{'user_id': 'default_user'}
+2026-04-10 17:01:19,223 - agent - INFO - user_profile_skill.py:76 - [get_user_profile_skill] 正在尝试读取用户 default_user 的长期画像...
+2026-04-10 17:01:19,224 - agent - ERROR - user_profile_skill.py:93 - [get_user_profile_skill] 读取画像异常: 'VectorStoreService' object has no attribute 'get_by_id'
+2026-04-10 17:01:19,224 - agent - INFO - middleware.py:36 - [tool monitor]工具get_user_profile_skill调用成功
+2026-04-10 17:01:19,225 - agent - INFO - middleware.py:53 - [log_before_model]即将调用模型，带有3条消息。
+2026-04-10 17:01:19,226 - agent - DEBUG - middleware.py:54 - [log_before_model]ToolMessage | 读取用户画像时出错，请暂时作为新用户处理。
+2026-04-10 17:01:19,227 - agent - INFO - prompt_loader.py:43 - [load_system_prompts]成功将 4 个阶段提示词组装为全局 SOP 大脑。
+2026-04-10 17:02:14,247 - agent - INFO - gateway_handler.py:47 - [IntentGateway] 正在对输入进行意图分析与改写拦截: 我对这个行程中的所有的景点都表示五分
+2026-04-10 17:02:17,629 - agent - INFO - react_agent.py:48 - [default_user] 命中闲聊路由，直接返回兜底响应，绕过 ReAct 链。

@@ -1,0 +1,25 @@
+2026-03-16 20:39:14,815 - agent - INFO - middleware.py:50 - [log_before_model]即将调用模型，带有1条消息。
+2026-03-16 20:39:14,816 - agent - DEBUG - middleware.py:52 - [log_before_model]HumanMessage | 给我生成我的使用报告
+2026-03-16 20:39:18,835 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：get_user_id
+2026-03-16 20:39:18,835 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{}
+2026-03-16 20:39:18,836 - agent - INFO - middleware.py:36 - [tool monitor]工具get_user_id调用成功
+2026-03-16 20:39:18,838 - agent - INFO - middleware.py:50 - [log_before_model]即将调用模型，带有3条消息。
+2026-03-16 20:39:18,838 - agent - DEBUG - middleware.py:52 - [log_before_model]ToolMessage | 1009
+2026-03-16 20:39:20,881 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：get_current_month
+2026-03-16 20:39:20,881 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{}
+2026-03-16 20:39:20,882 - agent - INFO - middleware.py:36 - [tool monitor]工具get_current_month调用成功
+2026-03-16 20:39:20,883 - agent - INFO - middleware.py:50 - [log_before_model]即将调用模型，带有5条消息。
+2026-03-16 20:39:20,883 - agent - DEBUG - middleware.py:52 - [log_before_model]ToolMessage | 2025-04
+2026-03-16 20:39:29,179 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：fill_context_for_report
+2026-03-16 20:39:29,179 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{}
+2026-03-16 20:39:29,179 - agent - INFO - middleware.py:36 - [tool monitor]工具fill_context_for_report调用成功
+2026-03-16 20:39:29,180 - agent - INFO - middleware.py:50 - [log_before_model]即将调用模型，带有7条消息。
+2026-03-16 20:39:29,180 - agent - DEBUG - middleware.py:52 - [log_before_model]ToolMessage | fill_context_for_report已调用
+2026-03-16 20:39:34,654 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：fetch_external_data
+2026-03-16 20:39:34,654 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{'user_id': '1009', 'month': '2025-04'}
+2026-03-16 20:39:34,658 - agent - INFO - middleware.py:36 - [tool monitor]工具fetch_external_data调用成功
+2026-03-16 20:39:34,659 - agent - INFO - middleware.py:50 - [log_before_model]即将调用模型，带有9条消息。
+2026-03-16 20:39:34,659 - agent - DEBUG - middleware.py:52 - [log_before_model]ToolMessage | {'特征': '80㎡两居 | 养宠 | 仿实木', '效率': '宠物毛发清理:90%\\n自动回充成功率:95%', '耗材': '胶刷缠绕:轻度\\n滤网寿命:剩余50天', '对比': '养宠家庭中清洁效率前20%'}
+2026-03-16 22:30:20,111 - agent - WARNING - agent_tools.py:111 - 高德定位无结果：INVALID_USER_KEY
+2026-03-16 22:32:09,389 - agent - WARNING - agent_tools.py:111 - 高德定位无结果：INVALID_USER_SIGNATURE
+2026-03-16 22:33:26,548 - agent - INFO - agent_tools.py:108 - 高德定位成功：哈尔滨

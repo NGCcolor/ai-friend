@@ -1,0 +1,116 @@
+2026-04-05 18:59:46,809 - agent - DEBUG - skill_manager.py:18 - [SkillManager] 成功注册技能: time_perception_skill
+2026-04-05 18:59:46,810 - agent - DEBUG - skill_manager.py:18 - [SkillManager] 成功注册技能: weather_query_skill
+2026-04-05 18:59:46,915 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有1条消息。
+2026-04-05 18:59:46,915 - agent - DEBUG - middleware.py:53 - [log_before_model]HumanMessage | 我现在在哪个城市？现在什么季节？适合推荐去哪里玩？
+2026-04-05 18:59:49,985 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：get_user_location
+2026-04-05 18:59:49,986 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{}
+2026-04-05 18:59:49,986 - agent - INFO - middleware.py:36 - [tool monitor]工具get_user_location调用成功
+2026-04-05 18:59:49,987 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有3条消息。
+2026-04-05 18:59:49,987 - agent - DEBUG - middleware.py:53 - [log_before_model]ToolMessage | Error: get_user_location is not a valid tool, try one of [time_perception_skill, weather_query_skill].
+2026-04-05 18:59:52,364 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：time_perception_skill
+2026-04-05 18:59:52,364 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{}
+2026-04-05 18:59:52,364 - agent - INFO - middleware.py:36 - [tool monitor]工具time_perception_skill调用成功
+2026-04-05 18:59:52,365 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有5条消息。
+2026-04-05 18:59:52,365 - agent - DEBUG - middleware.py:53 - [log_before_model]ToolMessage | 当前日期：2026-04-05，时间：18:59:52，星期日，当前季节：春季。
+2026-04-05 19:06:45,586 - agent - DEBUG - skill_manager.py:18 - [SkillManager] 成功注册技能: time_perception_skill
+2026-04-05 19:06:45,586 - agent - DEBUG - skill_manager.py:18 - [SkillManager] 成功注册技能: weather_query_skill
+2026-04-05 19:06:45,630 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有1条消息。
+2026-04-05 19:06:45,630 - agent - DEBUG - middleware.py:53 - [log_before_model]HumanMessage | 我现在在哪个城市？现在什么季节？适合推荐去哪里玩？
+2026-04-05 19:06:47,386 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：get_user_location
+2026-04-05 19:06:47,386 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{}
+2026-04-05 19:06:47,386 - agent - INFO - middleware.py:36 - [tool monitor]工具get_user_location调用成功
+2026-04-05 19:06:47,387 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有3条消息。
+2026-04-05 19:06:47,387 - agent - DEBUG - middleware.py:53 - [log_before_model]ToolMessage | Error: get_user_location is not a valid tool, try one of [time_perception_skill, weather_query_skill].
+2026-04-05 19:06:49,520 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：time_perception_skill
+2026-04-05 19:06:49,521 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{}
+2026-04-05 19:06:49,522 - agent - INFO - middleware.py:36 - [tool monitor]工具time_perception_skill调用成功
+2026-04-05 19:06:49,523 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有5条消息。
+2026-04-05 19:06:49,523 - agent - DEBUG - middleware.py:53 - [log_before_model]ToolMessage | 当前日期：2026-04-05，时间：19:06:49，星期日，当前季节：春季。
+2026-04-05 19:07:25,947 - agent - INFO - agent_tools.py:171 - 成功获取实时环境上下文：当前日期：2026-04-05，当前时间：19:07:25，星期日，当前季节：春季。
+2026-04-05 19:07:26,106 - agent - INFO - agent_tools.py:126 - 高德定位成功：黑龙江哈尔滨
+2026-04-05 19:08:56,459 - agent - INFO - agent_tools.py:171 - 成功获取实时环境上下文：当前日期：2026-04-05，当前时间：19:08:56，星期日，当前季节：春季。
+2026-04-05 19:08:56,600 - agent - INFO - agent_tools.py:126 - 高德定位成功：黑龙江哈尔滨
+2026-04-05 19:15:40,701 - agent - DEBUG - skill_manager.py:18 - [SkillManager] 成功注册技能: time_perception_skill
+2026-04-05 19:15:40,701 - agent - DEBUG - skill_manager.py:18 - [SkillManager] 成功注册技能: weather_query_skill
+2026-04-05 19:15:40,745 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有1条消息。
+2026-04-05 19:15:40,745 - agent - DEBUG - middleware.py:53 - [log_before_model]HumanMessage | 我现在在哪个城市？现在什么季节什么天气？适合推荐去哪里玩？
+2026-04-05 19:15:43,251 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：get_user_location
+2026-04-05 19:15:43,251 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{}
+2026-04-05 19:15:43,252 - agent - INFO - middleware.py:36 - [tool monitor]工具get_user_location调用成功
+2026-04-05 19:15:43,252 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有3条消息。
+2026-04-05 19:15:43,252 - agent - DEBUG - middleware.py:53 - [log_before_model]ToolMessage | Error: get_user_location is not a valid tool, try one of [time_perception_skill, weather_query_skill].
+2026-04-05 19:15:46,667 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：time_perception_skill
+2026-04-05 19:15:46,668 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{}
+2026-04-05 19:15:46,669 - agent - INFO - middleware.py:36 - [tool monitor]工具time_perception_skill调用成功
+2026-04-05 19:15:46,669 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有5条消息。
+2026-04-05 19:15:46,669 - agent - DEBUG - middleware.py:53 - [log_before_model]ToolMessage | 当前日期：2026-04-05，时间：19:15:46，星期日，当前季节：春季。
+2026-04-05 19:20:25,523 - agent - DEBUG - skill_manager.py:18 - [SkillManager] 成功注册技能: time_perception_skill
+2026-04-05 19:20:25,523 - agent - DEBUG - skill_manager.py:18 - [SkillManager] 成功注册技能: weather_query_skill
+2026-04-05 19:20:25,523 - agent - DEBUG - skill_manager.py:18 - [SkillManager] 成功注册技能: location_perception_skill
+2026-04-05 19:20:25,537 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有1条消息。
+2026-04-05 19:20:25,538 - agent - DEBUG - middleware.py:53 - [log_before_model]HumanMessage | 我现在在哪个城市？现在什么季节什么天气？适合推荐去哪里玩？
+2026-04-05 19:20:28,015 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：location_perception_skill
+2026-04-05 19:20:28,015 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{}
+2026-04-05 19:20:28,148 - agent - INFO - location_skill.py:45 - [location_perception_skill] 高德定位成功：黑龙江哈尔滨
+2026-04-05 19:20:28,149 - agent - INFO - middleware.py:36 - [tool monitor]工具location_perception_skill调用成功
+2026-04-05 19:20:28,150 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有3条消息。
+2026-04-05 19:20:28,150 - agent - DEBUG - middleware.py:53 - [log_before_model]ToolMessage | 黑龙江哈尔滨
+2026-04-05 19:20:30,935 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：time_perception_skill
+2026-04-05 19:20:30,936 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{}
+2026-04-05 19:20:30,936 - agent - INFO - middleware.py:36 - [tool monitor]工具time_perception_skill调用成功
+2026-04-05 19:20:30,938 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有5条消息。
+2026-04-05 19:20:30,938 - agent - DEBUG - middleware.py:53 - [log_before_model]ToolMessage | 当前日期：2026-04-05，时间：19:20:30，星期日，当前季节：春季。
+2026-04-05 19:20:33,463 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：weather_query_skill
+2026-04-05 19:20:33,463 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{'city': '哈尔滨'}
+2026-04-05 19:20:33,618 - agent - INFO - middleware.py:36 - [tool monitor]工具weather_query_skill调用成功
+2026-04-05 19:20:33,619 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有7条消息。
+2026-04-05 19:20:33,619 - agent - DEBUG - middleware.py:53 - [log_before_model]ToolMessage | 哈尔滨实时天气：阴，气温2℃，风向东，风力5级。
+2026-04-05 19:26:31,896 - agent - DEBUG - skill_manager.py:18 - [SkillManager] 成功注册技能: time_perception_skill
+2026-04-05 19:26:31,896 - agent - DEBUG - skill_manager.py:18 - [SkillManager] 成功注册技能: weather_query_skill
+2026-04-05 19:26:31,896 - agent - DEBUG - skill_manager.py:18 - [SkillManager] 成功注册技能: location_perception_skill
+2026-04-05 19:26:31,912 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有1条消息。
+2026-04-05 19:26:31,912 - agent - DEBUG - middleware.py:53 - [log_before_model]HumanMessage | 我现在在哪个城市？现在什么季节什么天气？适合推荐去哪里玩？
+2026-04-05 19:26:34,606 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：location_perception_skill
+2026-04-05 19:26:34,606 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{}
+2026-04-05 19:26:34,609 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：time_perception_skill
+2026-04-05 19:26:34,609 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{}
+2026-04-05 19:26:34,610 - agent - INFO - middleware.py:36 - [tool monitor]工具time_perception_skill调用成功
+2026-04-05 19:26:34,744 - agent - INFO - location_skill.py:45 - [location_perception_skill] 高德定位成功：黑龙江哈尔滨
+2026-04-05 19:26:34,745 - agent - INFO - middleware.py:36 - [tool monitor]工具location_perception_skill调用成功
+2026-04-05 19:26:34,746 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有4条消息。
+2026-04-05 19:26:34,747 - agent - DEBUG - middleware.py:53 - [log_before_model]ToolMessage | 当前日期：2026-04-05，时间：19:26:34，星期日，当前季节：春季。
+2026-04-05 19:26:37,943 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：weather_query_skill
+2026-04-05 19:26:37,944 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{'city': '哈尔滨市'}
+2026-04-05 19:26:38,177 - agent - INFO - middleware.py:36 - [tool monitor]工具weather_query_skill调用成功
+2026-04-05 19:26:38,179 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有6条消息。
+2026-04-05 19:26:38,179 - agent - DEBUG - middleware.py:53 - [log_before_model]ToolMessage | 哈尔滨市实时天气：阴，气温2℃，风向东，风力5级。
+2026-04-05 20:06:58,944 - agent - DEBUG - skill_manager.py:18 - [SkillManager] 成功注册技能: time_perception_skill
+2026-04-05 20:06:58,944 - agent - DEBUG - skill_manager.py:18 - [SkillManager] 成功注册技能: weather_query_skill
+2026-04-05 20:06:58,945 - agent - DEBUG - skill_manager.py:18 - [SkillManager] 成功注册技能: location_perception_skill
+2026-04-05 20:06:58,945 - agent - DEBUG - skill_manager.py:18 - [SkillManager] 成功注册技能: transit_route_skill
+2026-04-05 20:06:58,963 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有1条消息。
+2026-04-05 20:06:58,963 - agent - DEBUG - middleware.py:53 - [log_before_model]HumanMessage | 我现在在哪个城市？现在什么季节什么天气？适合推荐去哪里玩？
+2026-04-05 20:07:00,524 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：location_perception_skill
+2026-04-05 20:07:00,525 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{}
+2026-04-05 20:07:00,527 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：time_perception_skill
+2026-04-05 20:07:00,528 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{}
+2026-04-05 20:07:00,528 - agent - INFO - middleware.py:36 - [tool monitor]工具time_perception_skill调用成功
+2026-04-05 20:07:00,657 - agent - INFO - location_skill.py:45 - [location_perception_skill] 高德定位成功：黑龙江哈尔滨
+2026-04-05 20:07:00,657 - agent - INFO - middleware.py:36 - [tool monitor]工具location_perception_skill调用成功
+2026-04-05 20:07:00,658 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有4条消息。
+2026-04-05 20:07:00,659 - agent - DEBUG - middleware.py:53 - [log_before_model]ToolMessage | 当前日期：2026-04-05，时间：20:07:00，星期日，当前季节：春季。
+2026-04-05 20:07:02,675 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：weather_query_skill
+2026-04-05 20:07:02,676 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{'city': '哈尔滨'}
+2026-04-05 20:07:02,849 - agent - INFO - middleware.py:36 - [tool monitor]工具weather_query_skill调用成功
+2026-04-05 20:07:02,850 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有6条消息。
+2026-04-05 20:07:02,850 - agent - DEBUG - middleware.py:53 - [log_before_model]ToolMessage | 哈尔滨实时天气：阴，气温2℃，风向东南，风力4级。
+2026-04-05 20:07:04,558 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：get_user_id
+2026-04-05 20:07:04,558 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{}
+2026-04-05 20:07:04,559 - agent - INFO - middleware.py:36 - [tool monitor]工具get_user_id调用成功
+2026-04-05 20:07:04,559 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有8条消息。
+2026-04-05 20:07:04,560 - agent - DEBUG - middleware.py:53 - [log_before_model]ToolMessage | Error: get_user_id is not a valid tool, try one of [time_perception_skill, weather_query_skill, location_perception_skill, transit_route_skill].
+2026-04-05 20:07:06,417 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：fetch_external_data
+2026-04-05 20:07:06,418 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{}
+2026-04-05 20:07:06,418 - agent - INFO - middleware.py:36 - [tool monitor]工具fetch_external_data调用成功
+2026-04-05 20:07:06,418 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有10条消息。
+2026-04-05 20:07:06,419 - agent - DEBUG - middleware.py:53 - [log_before_model]ToolMessage | Error: fetch_external_data is not a valid tool, try one of [time_perception_skill, weather_query_skill, location_perception_skill, transit_route_skill].

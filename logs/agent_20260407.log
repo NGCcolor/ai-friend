@@ -1,0 +1,75 @@
+2026-04-07 20:47:29,591 - agent - DEBUG - skill_manager.py:18 - [SkillManager] 成功注册技能: time_perception_skill
+2026-04-07 20:47:29,592 - agent - DEBUG - skill_manager.py:18 - [SkillManager] 成功注册技能: weather_query_skill
+2026-04-07 20:47:29,592 - agent - DEBUG - skill_manager.py:18 - [SkillManager] 成功注册技能: location_perception_skill
+2026-04-07 20:47:29,592 - agent - DEBUG - skill_manager.py:18 - [SkillManager] 成功注册技能: transit_route_skill
+2026-04-07 20:47:29,592 - agent - DEBUG - skill_manager.py:18 - [SkillManager] 成功注册技能: update_user_profile_skill
+2026-04-07 20:47:29,592 - agent - DEBUG - skill_manager.py:18 - [SkillManager] 成功注册技能: find_similar_vibe_skill
+2026-04-07 20:47:29,592 - agent - DEBUG - skill_manager.py:18 - [SkillManager] 成功注册技能: xhs_mcp_search_skill
+2026-04-07 20:47:29,592 - agent - DEBUG - skill_manager.py:18 - [SkillManager] 成功注册技能: get_user_profile_skill
+2026-04-07 20:47:29,593 - agent - DEBUG - skill_manager.py:18 - [SkillManager] 成功注册技能: save_global_feedback_skill
+2026-04-07 20:47:29,813 - agent - INFO - prompt_loader.py:43 - [load_system_prompts]成功将 4 个阶段提示词组装为全局 SOP 大脑。
+2026-04-07 20:47:57,322 - agent - INFO - gateway_handler.py:47 - [IntentGateway] 正在对输入进行意图分析与改写拦截: 帮我规划一个三天的形成
+2026-04-07 20:48:00,803 - agent - INFO - react_agent.py:119 - [ReactAgent] 命中任务路由。生成 RAG 词: []
+2026-04-07 20:48:03,892 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有1条消息。
+2026-04-07 20:48:03,892 - agent - DEBUG - middleware.py:53 - [log_before_model]HumanMessage | [系统底层前置处理结果]
+用户的原始提问是：“帮我规划一个三天的形成”
+经系统解析，其实际意图为：用户希望规划一个为期三天的旅行行程，但未指定目的地、出行方式、兴趣偏好等关键信息。
+
+为保证规划准确性，系统已生成最优检索词，请直接调用工具：
+- 内部 RAG 检索工具建议关键词：【】
+- 外部 MCP（如小红书）检索建议关键词：【】
+
+现在，请根据上述意图和关键词，开始你的规划与工具调用：
+2026-04-07 20:48:03,895 - agent - INFO - prompt_loader.py:43 - [load_system_prompts]成功将 4 个阶段提示词组装为全局 SOP 大脑。
+2026-04-07 20:48:06,073 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：location_perception_skill
+2026-04-07 20:48:06,073 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{}
+2026-04-07 20:48:06,076 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：time_perception_skill
+2026-04-07 20:48:06,077 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{}
+2026-04-07 20:48:06,078 - agent - INFO - middleware.py:36 - [tool monitor]工具time_perception_skill调用成功
+2026-04-07 20:48:06,284 - agent - ERROR - location_skill.py:57 - [location_perception_skill] 定位失败：Invalid format specifier
+2026-04-07 20:48:06,284 - agent - INFO - middleware.py:36 - [tool monitor]工具location_perception_skill调用成功
+2026-04-07 20:48:06,934 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有4条消息。
+2026-04-07 20:48:06,934 - agent - DEBUG - middleware.py:53 - [log_before_model]ToolMessage | 当前日期：2026-04-07，时间：20:48:06，星期二，当前季节：春季。
+2026-04-07 20:48:06,936 - agent - INFO - prompt_loader.py:43 - [load_system_prompts]成功将 4 个阶段提示词组装为全局 SOP 大脑。
+2026-04-07 20:48:08,445 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：weather_query_skill
+2026-04-07 20:48:08,446 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{'city': '哈尔滨市'}
+2026-04-07 20:48:08,607 - agent - INFO - middleware.py:36 - [tool monitor]工具weather_query_skill调用成功
+2026-04-07 20:48:09,055 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有6条消息。
+2026-04-07 20:48:09,056 - agent - DEBUG - middleware.py:53 - [log_before_model]ToolMessage | 哈尔滨市实时天气：晴，气温6℃，风向西南，风力≤3级。
+2026-04-07 20:48:09,058 - agent - INFO - prompt_loader.py:43 - [load_system_prompts]成功将 4 个阶段提示词组装为全局 SOP 大脑。
+2026-04-07 20:48:11,776 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：get_user_profile_skill
+2026-04-07 20:48:11,777 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{'user_id': '1001'}
+2026-04-07 20:48:11,778 - agent - INFO - user_profile_skill.py:76 - [get_user_profile_skill] 正在尝试读取用户 1001 的长期画像...
+2026-04-07 20:48:11,778 - agent - ERROR - user_profile_skill.py:93 - [get_user_profile_skill] 读取画像异常: 'VectorStoreService' object has no attribute 'get_by_id'
+2026-04-07 20:48:11,779 - agent - INFO - middleware.py:36 - [tool monitor]工具get_user_profile_skill调用成功
+2026-04-07 20:48:12,120 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有8条消息。
+2026-04-07 20:48:12,121 - agent - DEBUG - middleware.py:53 - [log_before_model]ToolMessage | 读取用户画像时出错，请暂时作为新用户处理。
+2026-04-07 20:48:12,123 - agent - INFO - prompt_loader.py:43 - [load_system_prompts]成功将 4 个阶段提示词组装为全局 SOP 大脑。
+2026-04-07 20:48:13,901 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：xhs_mcp_search_skill
+2026-04-07 20:48:13,902 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{'keyword': '哈尔滨 三天行程 小众玩法'}
+2026-04-07 20:48:13,903 - agent - INFO - xhs_mcp_skill.py:25 - [xhs_mcp_skill] 开始检索小红书并获取详情，关键词：哈尔滨 三天行程 小众玩法
+2026-04-07 20:48:53,904 - agent - INFO - xhs_mcp_skill.py:87 - 等待 2.5 秒后抓取第 2 篇详情，防风控...
+2026-04-07 20:49:15,820 - agent - INFO - xhs_mcp_skill.py:87 - 等待 2.5 秒后抓取第 3 篇详情，防风控...
+2026-04-07 20:49:38,391 - agent - INFO - xhs_mcp_skill.py:136 - [xhs_mcp_skill] 数据解析与详情抓取全部完成！
+2026-04-07 20:49:38,392 - agent - INFO - middleware.py:36 - [tool monitor]工具xhs_mcp_search_skill调用成功
+2026-04-07 20:49:53,042 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有10条消息。
+2026-04-07 20:49:53,043 - agent - DEBUG - middleware.py:53 - [log_before_model]ToolMessage | 为您检索到关于 '哈尔滨 三天行程 小众玩法' 的最新小红书深度笔记：
+
+=== 第 1 篇 ===
+【标题】哈尔滨📍三天两夜｜不废腿版保姆级逛吃攻略 (作者:小鹿跑丢了🤨 | 点赞:547)
+【正文详情】哈尔滨又到了老鼠出门都得打领带的季节了，哈尔滨真的宠南方小土豆子，全东北见到把公交车把杆降到最低的就他们，完全不考虑北方大苞米死活！ 为了能让南方的小土豆有更好的游玩体验，小编特意码了一份三天两晚的行程安排，主打的就是为了懒人，码住不迷路！ #哈尔滨旅行[话题]#  #哈尔滨美食探店[话题]# #周末去哪玩[话题]# #哈尔滨吃喝玩乐攻略[话题]#  #大声安利本地美食[话题]#  #哈尔滨旅游攻略[话题]##哈尔滨美食[话题]##哈尔滨必打卡[话题]##哈尔滨本地人常去的店[话题]#...
+
+=== 第 2 篇 ===
+【标题】哈尔滨冰雪季3天2晚保姆级攻略❗️懒人版 (作者:番茄游记 | 点赞:2779)
+【正文详情】尔滨❗️你真的，别太爱“南”了❗️ 趁着今年冰雪季，南方小土豆们赶紧冲啊☃️ 这份3天2晚的懒人版保姆级攻略给你准备好了 包括【交通+住宿+路线参考+美食+避坑指南】 好玩不累🚫建议直接抄作业‼ - 🚗关于交通 ✈️飞机：抵达哈尔滨太平机场，距离市区38km左右，机场大巴20r/人；打车约80r 🚄高铁/动车：有哈尔滨站西站、东站、北站可选，优先选择西站，车次多 - ☃️3天2晚路线参考（P2-4） DAY1：巴洛克风情街→索菲亚教堂→道里菜市场→中央大街→防洪纪念塔→松花江铁路大桥 DAY2：松花江索道→太阳岛·雪博会→极地公园&海洋馆→冰雪大世界→群力音乐公园·网红大雪人 DAY3：七三一陈列馆→哈尔滨工业大学→黑龙江省博物馆→果戈里大街→哈药六厂→龙塔 - 🏨关于住宿 ✨中央大街或博物馆附近：属于景点的中心位置，交通便利，吃喝玩乐都方便 ✨亚布力：适合想要去滑雪的小伙伴，根据滑雪行程...
+
+=== 第 3 篇 ===
+【标题】哈尔滨三日游，不走回头路版 (作者:就是欧皇啊 | 点赞:2262)
+【正文详情】抓取超时（可能触发风控限制）。
+2026-04-07 20:49:53,045 - agent - INFO - prompt_loader.py:43 - [load_system_prompts]成功将 4 个阶段提示词组装为全局 SOP 大脑。
+2026-04-07 20:49:55,141 - agent - INFO - middleware.py:28 - [tool monitor]执行工具：rag_summarize
+2026-04-07 20:49:55,141 - agent - INFO - middleware.py:30 - [tool monitor]传入参数：{'query': '哈尔滨三天行程推荐，适合初次到访者'}
+2026-04-07 20:49:55,142 - agent - INFO - middleware.py:36 - [tool monitor]工具rag_summarize调用成功
+2026-04-07 20:49:59,636 - agent - INFO - middleware.py:52 - [log_before_model]即将调用模型，带有12条消息。
+2026-04-07 20:49:59,636 - agent - DEBUG - middleware.py:53 - [log_before_model]ToolMessage | Error: rag_summarize is not a valid tool, try one of [time_perception_skill, weather_query_skill, location_perception_skill, transit_route_skill, update_user_profile_skill, find_similar_vibe_skill, xhs_mcp_search_skill, get_user_profile_skill, save_global_feedback_skill].
+2026-04-07 20:49:59,638 - agent - INFO - prompt_loader.py:43 - [load_system_prompts]成功将 4 个阶段提示词组装为全局 SOP 大脑。
