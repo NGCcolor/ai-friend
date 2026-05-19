@@ -1,33 +1,22 @@
-"""
-
-D:\anac\envs\agent\python.exe -m streamlit run app.py
-
-"""
-
-
 import os
 import requests
 import datetime
 from langchain_core.tools import tool
 from rag.rag_service import RagSummarizeService
 import random
-from utils.config_handler import agent_conf
+from config import settings
 from utils.logger_handler import logger
-rag = RagSummarizeService()
 from utils.path_tool import get_abs_path
-# 模拟用户ID池：用于随机返回用户ID
+
+rag = RagSummarizeService()
 user_ids = ["1001", "1002", "1003", "1004", "1005", "1006", "1007", "1008", "1009", "1010"]
-# 定义月份数组：存储2025年全年的年月字符串，格式为"YYYY-MM"
 month_arr = [
     "2025-01", "2025-02", "2025-03", "2025-04", "2025-05", "2025-06",
     "2025-07", "2025-08", "2025-09", "2025-10", "2025-11", "2025-12"
 ]
 
-
-# -------------------------- 配置区（替换为你的API密钥） --------------------------
-# 1. 修复：API Key不需要get_abs_path（路径工具是给文件用的，Key是字符串）
-HEWEATHER_KEY = agent_conf.get("HEWEATHER_KEY", "")  # 和风天气API Key
-AMAP_KEY = agent_conf.get("AMAP_KEY", "").strip()        # 修复：高德Key不再错用和风Key
+HEWEATHER_KEY = settings.agent.heweather_key
+AMAP_KEY = settings.agent.amap_key
 
 # 定义外部数据字典：key为月份字符串，value为对应的数据容器
 # 用途：用于存储每个月份的外部业务数据（如每月的用户反馈、订单数据、统计结果等）
@@ -167,52 +156,21 @@ def get_current_date() -> str:
         return "2025-01-01"
 
 def generate_external_data():
-    """
-    核心辅助函数：加载外部CSV数据文件，构建「用户ID→月份→使用记录」的多层字典
-    数据结构设计：
-    {
-        "user_id": {          # 第一层：用户唯一标识
-            "month" : {       # 第二层：月份（YYYY-MM）
-                "特征": xxx,  # 第三层：用户该月使用特征
-                "效率": xxx,  # 用户该月使用效率
-                "耗材": xxx,  # 用户该月耗材使用情况
-                "对比": xxx   # 用户该月数据与往期对比
-            },
-            ...
-        },
-        ...
-    }
-    :return: None（数据直接填充到全局external_data字典）
-    """
-    # 1. 仅在external_data为空时加载（避免重复读取文件，提升性能）
     if not external_data:
-        # 2. 从Agent配置中获取外部数据文件的绝对路径
-        external_data_path = get_abs_path(agent_conf["external_data_path"])
-
-        # 3. 校验文件是否存在，不存在则抛出明确异常
+        external_data_path = get_abs_path(settings.agent.external_data_path)
         if not os.path.exists(external_data_path):
             raise FileNotFoundError(f"外部数据文件{external_data_path}不存在")
-
-        # 4. 读取CSV文件并解析数据
         with open(external_data_path, "r", encoding="utf-8") as f:
-            # 跳过首行（表头），遍历后续数据行
             for line in f.readlines()[1:]:
-                # 按逗号分割每行数据，得到字段数组
                 arr: list[str] = line.strip().split(",")
-
-                # 5. 提取并清洗字段（去除可能的双引号，避免数据污染）
-                user_id: str = arr[0].replace('"', "")    # 第1列：用户ID
-                feature: str = arr[1].replace('"', "")    # 第2列：使用特征
-                efficiency: str = arr[2].replace('"', "") # 第3列：使用效率
-                consumables: str = arr[3].replace('"', "")# 第4列：耗材使用
-                comparison: str = arr[4].replace('"', "") # 第5列：数据对比
-                time: str = arr[5].replace('"', "")       # 第6列：月份（YYYY-MM）
-
-                # 6. 构建多层字典：用户ID不存在则初始化空字典
+                user_id: str = arr[0].replace('"', "")
+                feature: str = arr[1].replace('"', "")
+                efficiency: str = arr[2].replace('"', "")
+                consumables: str = arr[3].replace('"', "")
+                comparison: str = arr[4].replace('"', "")
+                time: str = arr[5].replace('"', "")
                 if user_id not in external_data:
                     external_data[user_id] = {}
-
-                # 7. 填充当前用户-月份的使用记录
                 external_data[user_id][time] = {
                     "特征": feature,
                     "效率": efficiency,

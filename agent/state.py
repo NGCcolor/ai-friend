@@ -2,33 +2,39 @@
 
 from typing import TypedDict, Literal
 
+
 class TravelState(TypedDict):
-    """
-    LangGraph 全局状态字典。
-    像传送带一样，在 Gateway -> Retriever -> Creator -> Evaluator 之间传递数据。
-    """
+    """LangGraph 全局状态字典"""
+
     # 1. 基础输入信息
     user_id: str
     query: str
     short_term_history: str
 
-    # 2. Gateway (网关) 产物
+    # 2. Gateway 产物
     is_chitchat: bool
     chitchat_reply: str
+    intent_type: Literal["chitchat", "tool_only", "planning"]  # 意图类型
     true_intent: str
     rag_keyword: str
     mcp_keyword: str
+    tool_name: str  # 工具类意图时，指定要调用的工具名
+    tool_args: dict  # 工具类意图时，工具参数
 
-    # 3. Retriever (数据挖掘机) 产物
+    # 3. 工具类直接输出
+    tool_response: str
+
+    # 4. Retriever 产物
     facts_context: str
 
-    # 4. Creator (主规划师) 产物
+    # 5. Creator 产物
     draft_itinerary: str
-    revision_count: int  # 记录被打回修改的次数，防止死循环
+    revision_count: int
 
-    # 5. Evaluator (质检员) 产物
+    # 6. AuditAgent 产物
     eval_status: Literal["Pass", "Fail", "Pending"]
-    feedback: str        # 打回时的修改建议
+    feedback: str
+    audit_count: int
 
-    # 【新增】：全局结构化记忆黑板！
+    # 7. 全局结构化记忆
     travel_spec: dict

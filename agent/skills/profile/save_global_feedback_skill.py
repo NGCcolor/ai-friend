@@ -6,7 +6,6 @@ from langchain_core.tools import BaseTool
 from rag.vector_store import VectorStoreService
 from utils.logger_handler import logger
 
-# 实例化全局旅游知识库（与用户画像库隔离）
 knowledge_vs = VectorStoreService(collection_name="travel_knowledge_base")
 
 

@@ -1,0 +1,64 @@
+# ==========================================
+# 智能旅游 AI 管家 - 统一配置文件
+# ==========================================
+
+# 大模型配置
+model:
+  chat_model_name: mimo-v2.5-pro
+  chat_api_key: tp-cc5hpv3av4xo9bi0qxbjyob5i4u3ng3itxpwikh10h24qwxn
+  chat_base_url: https://token-plan-cn.xiaomimimo.com/v1
+  embedding_model_name: text-embedding-v4
+  embedding_api_key: sk-5a198bfa388c46f68955df8dbbd9ce20
+
+# Agent 配置
+agent:
+  external_data_path: data/external/records.csv
+  heweather_key: a914e104c3544c62910c04f4ec508f24
+  amap_key: 9257e4e7897594032b39f7fbdb41964f
+
+# Chroma 向量库配置
+chroma:
+  # 三表隔离架构
+  public_collection: public_knowledge
+  profile_collection: travel_user_profiles
+  history_collection: travel_history_records
+  # 持久化目录
+  persist_directory: chroma_db
+  # RAG 检索召回数
+  k: 3
+  # 知识库源文件目录
+  data_path: data
+  # MD5 记录文件
+  md5_hex_store: md5.text
+  # 允许的文件类型
+  allow_knowledge_file_type:
+    - txt
+    - pdf
+  # 文本切分配置
+  chunk_size: 200
+  chunk_overlap: 20
+  separators:
+    - "\n\n"
+    - "\n"
+    - "."
+    - "!"
+    - "?"
+    - "。"
+    - "！"
+    - "？"
+    - " "
+    - ""
+
+# 提示词配置
+prompts:
+  main_prompt_path: prompts/main_prompt.txt
+  rag_summarize_prompt_path: prompts/rag_summarize.txt
+  report_prompt_path: prompts/report_prompt.txt
+  phase1_explore_path: prompts/phase1_explore.txt
+  phase2_plan_path: prompts/phase2_plan.txt
+  phase3_feedback_path: prompts/phase3_feedback.txt
+
+# 用户数据库配置
+user_db:
+  dir: data
+  filename: users_db.json

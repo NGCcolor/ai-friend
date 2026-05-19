@@ -2,15 +2,11 @@ from typing import Type
 from pydantic import BaseModel, Field
 from langchain_core.tools import BaseTool
 
-# 引入我们在第1步改好的底层驱动
 from rag.vector_store import VectorStoreService
 from utils.logger_handler import logger
-from utils.config_handler import chroma_conf
+from config import settings
 
-# =======================================================
-# 实例化一个完全独立的画像向量库（表名从 yml 读取，如果没有则用默认字符串）
-# =======================================================
-profile_collection = chroma_conf.get("profile_collection_name", "travel_user_profiles")
+profile_collection = settings.chroma.profile_collection
 profile_vector_store = VectorStoreService(collection_name=profile_collection)
 
 
